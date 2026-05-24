@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>1 - Mejoras en los puertos - PUERTOS DE RED - definición y uso</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../css/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">PUERTOS DE RED - definición y uso</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Puertos</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../1-Puertos/definicion/" class="dropdown-item">1 - Definición</a>
+</li>
+                                    
+<li>
+    <a href="../../1-Puertos/puerto_tcp_udp/" class="dropdown-item">2 - Puerto TCP/UDP</a>
+</li>
+                                    
+<li>
+    <a href="../../1-Puertos/capa_red/" class="dropdown-item">3 - Puertos de la Capa de Red</a>
+</li>
+                                    
+<li>
+    <a href="../../1-Puertos/tipos_puertos/" class="dropdown-item">4 - Tipos de puertos</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Seguridad conexiones</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">1 - Mejoras en los puertos</a>
+</li>
+                                    
+<li>
+    <a href="../seguridad_abrir_puertos/" class="dropdown-item">2 - Seguridad para abrir puertos</a>
+</li>
+                                    
+<li>
+    <a href="../peligro_conexiones/" class="dropdown-item">3 - Peligros en las conexiones</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../1-Puertos/tipos_puertos/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../seguridad_abrir_puertos/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#mejoras-en-los-puertos-tcpudp" class="nav-link">Mejoras en los puertos TCP/UDP</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#diferentes-estados-de-los-puertos" class="nav-link">Diferentes estados de los puertos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#diferencias-de-rendimiento" class="nav-link">Diferencias de rendimiento</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#por-que-es-importante-abrir-puertos" class="nav-link">Por qué es importante abrir puertos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="mejoras-en-los-puertos-tcpudp">Mejoras en los puertos TCP/UDP</h2>
+<p>Como puedes ver, los puertos TCP y UDP son una parte fundamental en Internet hoy en día. Estos se han utilizado ampliamente para las comunicaciones, durante décadas. Pero a pesar de que se ha demostrado que son eficaces y confiables para tal efecto, es muy importante que continúen evolucionando para poder adaptarse a los cambios y demandas actuales. Esto se debe al aumento exponencial de las aplicaciones que los requiere, así como para los servicios en línea que también son cada vez más.</p>
+<p>En el caso de <strong>TCP, alguna evolución puede pasar por las mejoras en la eficiencia y velocidad de transferencia de los datos</strong>. Para ello muchos desarrolladores exploran diferentes técnicas como puede ser la segmentación y la multiplexación. Estos mejoran los flujos de datos, para así optimizar la transmisión cuando se trata de grandes volúmenes de datos. Por otro lado, también se trabaja en mecanismos para poder controlar la congestión de la red. De forma que esta se hace más efectiva, y garantiza un rendimiento lo más óptimo posible en todos los casos.</p>
+<p>En el caso del protocolo <strong>UDP, este se ha utilizado mucho en aplicaciones donde se requiere una comunicación muy rápida</strong>. Pueden ser videojuegos o transmisiones en tiempo real. <strong>En cambio, está falto de mecanismos de control para prevenir errores</strong>, y la retransmisión de paquetes limita sus aplicaciones en algunos contextos. Por lo cual una posible evolución en este aspecto, podría ser el implicar la incorporación de mecanismos más selectivos para el control de errores y retransmisión. Lo cual puede permitir que se utilice en aplicaciones donde es muy importante mantener una integridad muy alta en los datos.</p>
+<p>Por otro lado, algo en lo que siempre se está evolucionando y mejorando es la seguridad. En los tiempos que corren los datos que se manejan en Internet son más privados que nunca, por lo cual la seguridad es un aspecto que no se puede olvidar nunca. Pero esto es algo que ya se aplica a prácticamente cualquier sistema ya en uno, o en desarrollo.</p>
+<h2 id="diferentes-estados-de-los-puertos">Diferentes estados de los puertos</h2>
+<p>Para determinar el estado de los puertos, podemos utilizar tres términos los cuales varían en función de la configuración de los mismos.</p>
+<ul>
+<li><strong>Puertos cerrados</strong>: Cuando la comunicación es rechazada completamente, por lo cual no generan ningún tráfico entrante o saliente.</li>
+<li><strong>Puertos filtrados</strong>: Todo el tráfico que transcurre por estos, es filtrado por aplicaciones de seguridad como los firewall.</li>
+<li><strong>Puertos abiertos</strong>: Cuando un servicio está escuchando en este puerto, y es accesible desde el exterior.</li>
+</ul>
+<h2 id="diferencias-de-rendimiento">Diferencias de rendimiento</h2>
+<p>Con TCP estamos ante un protocolo orientado a la conexión. Esto quiere decir que establece la conexión entre dos dispositivos, previamente a enviar los datos. Una vez esta está creada, TCP utiliza procesos de confirmación para poder garantizar que todos los datos se entreguen sin errores y en el orden correcto. Por lo cual es un protocolo confiable y seguro que se utiliza para la transmisión de datos críticos y sensibles, como la información financiera o los correos electrónicos. En cambio, estos procesos de confirmación y verificación de errores tienen un impacto significativo en el rendimiento de la red.</p>
+<p>Por lo general, <strong>TCP es más lento que UDP y requiere más ancho de banda</strong>. Esto ocurre porque cada paquete debe ser confirmado antes de que se envíe el siguiente, aumentando así la cantidad de tiempo que se tarda en realizar los envíos. Al cual tendremos que sumar, los procesos de confirmación.</p>
+<p>Por otro lado, con UDP estamos ante un protocolo sin conexión que no requiere una conexión previa entre los dispositivos antes de enviar datos. Esto quiere decir que los paquetes se envían inmediatamente y sin confirmación de recepción.</p>
+<p>Esto hace que estemos ante un protocolo rápido y eficiente que se utiliza para aplicaciones en tiempo real, como el streaming de video y audio, videojuegos o videollamadas. Pero a pesar de su rapidez, se trata de un sistema que es menos confiable que TCP. Esto ocurre porque no dispone de una confirmación de recepción, y tampoco contienen mecanismos de corrección de errores. Estos paquetes, se pueden perder o incluso llegar en un orden que no es el adecuado al envío que se ha realizado. Por lo cual puede afectar a la calidad de los datos que se han transmitido, siendo este el motivo por el cual se descarta para otro tipo de comunicaciones.</p>
+<p>En definitiva, hay que tener claro que, en términos de rendimiento puro, lo cierto es que los puertos UDP son los que ofrecen una mayor eficiente, siempre en comparación con los puertos TCP. Y todo porque este no pone una conexión antes de la transmisión en sí, por lo que los paquetes se envían de una forma más rápida y con una mejor latencia. Esto hace que, en servicios como los de almacenamiento en la nube en tiempo real, se use más el otro protocolo. Al igual que en otras opciones como videojuegos o transmisiones de vídeo en directo.</p>
+<h2 id="por-que-es-importante-abrir-puertos">Por qué es importante abrir puertos</h2>
+<p>Hemos mostrado los principales puertos tanto TCP como UDP. Ahora vamos a hablar de por qué en ocasiones es importante abrir determinados puertos. Lo es para que la conexión pueda pasar correctamente y lograr así una buena velocidad, evitar cortes y no tener problemas para acceder a ciertos servicios.</p>
+<h3 id="jugar-por-internet">Jugar por Internet</h3>
+<p>Un ejemplo claro es para jugar por Internet. Los juegos utilizan determinados puertos para poder establecer una conexión. Para que esa conexión sea veloz y no aparezcan cortes, es necesario saber qué puertos utiliza cada juego y abrirlos en el router. Esto evitará problemas o que incluso no puedas entrar en una partida determinada. Esto es algo que puede ser necesario tanto a la hora de jugar en ordenador como también a través de videoconsolas. Debes informarte bien sobre qué puertos utiliza cada juego y si es necesario o no abrirlos. En algunos routers incluso verás puertos predeterminados en la configuración para abrirlos fácilmente para determinados juegos populares.</p>
+<p>Videoconsolas como la PS4, PS5 o xBox pueden requerir de abrir un rango de puertos específico para poder jugar a determinados juegos sin que haya problemas. Podrás encontrar mucha información en Internet, en foros especializados o en la propia página de los videojuegos, donde verás cuáles debes abrir y así poder configurar correctamente tu router.</p>
+<p>En cuanto al puerto que los videojuegos van a utilizar, la elección es un proceso crítico. Y lo cierto es que de forma constante es muy incomprendido ante la creación de un videojuego online. En muchos casos, <strong>los desarrolladores tienen la capacidad y libertad de poder seleccionar los puertos que van a utilizar</strong> para sus servicios online y poder sacar el juego a la comunidad. A menudo, se eligen puertos muy específicos por diferentes razones. Algunos de ellos son bien conocidos y están asociados con un tráfico muy particular de la red. Como puede ser el puerto 80 o el 443. En cambio <strong>para evitar todo tipo de conflictos con otros servicios, suelen elegir puertos en rangos de entre 1024 y 49151</strong>. Lo cuales <strong><em>se conocen como puertos registrados</em></strong>.</p>
+<p>La elección de este puerto, también puede estar muy dictada por diferentes razones, como las convenciones de la industria del videojuego. Algunos juegos multijugador, pueden usar los mismos puertos para que la configuración sea mucho más sencilla para las redes de los jugadores. Y por supuesto, a la hora de resolver problemas también tendremos muchos videojuegos en el mismo puerto. Por lo cual sabemos más o menos hacia donde apuntar en todo caso.</p>
+<p>Cabe destacar, que los desarrolladores tienen capacidades para elegir el puerto. Pero es posible que no todos los juegos permitan a los jugadores modificar este parámetro para cambiar de puerto. Esto por lo general tiene sus razones, como puede ser la seguridad, la simplicidad de la conexión, o simplemente que el jugador tenga la experiencia de juego tal cual fue diseñada. Existen varias formas en las cuales los jugadores pueden configurar el router para que en juego funcione mejor. Pero lo más sensato en estos casos, es acudir a la página oficial de la desarrolladora, donde encontraremos en muchas ocasiones la información necesaria con respecto al puerto que utilizan sus videojuegos.</p>
+<h3 id="descargas-p2p">Descargas P2P</h3>
+<p>Algo similar ocurre al utilizar aplicaciones de <strong>descargas P2P</strong>. Estos programas van a conectarse a determinados puertos para establecer la conexión. Si esos puertos están cerrados, se produciría un cuello de botella y la velocidad de las descargas sería muy limitada y podrías tener problemas para bajar archivos correctamente.</p>
+<p>Por ejemplo para usar BitTorrent o uTorrent será necesario tener los puertos abiertos correctamente. En algunos casos no será necesario y no notarás diferencia, pero en otras ocasiones sí que podrás ver que los archivos se descargan mucho más rápido. Aplicaciones de descargas P2P clásicas como eMule incluso mostraban una señal que indicaba que los puertos estaban cerrados y la velocidad de descarga muy limitada.</p>
+<p>Especialmente en la descarga de archivos es cuando más interesa que la aplicación aproveche al máximo la capacidad que tiene nuestra conexión. Esto puede ser determinante de cara a que una descarga tarde más o tarde menos en completarse.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

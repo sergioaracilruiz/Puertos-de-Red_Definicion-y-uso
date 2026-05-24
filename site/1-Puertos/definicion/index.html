@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>1 - Definición - PUERTOS DE RED - definición y uso</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../css/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">PUERTOS DE RED - definición y uso</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Puertos</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">1 - Definición</a>
+</li>
+                                    
+<li>
+    <a href="../puerto_tcp_udp/" class="dropdown-item">2 - Puerto TCP/UDP</a>
+</li>
+                                    
+<li>
+    <a href="../capa_red/" class="dropdown-item">3 - Puertos de la Capa de Red</a>
+</li>
+                                    
+<li>
+    <a href="../tipos_puertos/" class="dropdown-item">4 - Tipos de puertos</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Seguridad conexiones</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../2-Seguridad/mejoras_puertos/" class="dropdown-item">1 - Mejoras en los puertos</a>
+</li>
+                                    
+<li>
+    <a href="../../2-Seguridad/seguridad_abrir_puertos/" class="dropdown-item">2 - Seguridad para abrir puertos</a>
+</li>
+                                    
+<li>
+    <a href="../../2-Seguridad/peligro_conexiones/" class="dropdown-item">3 - Peligros en las conexiones</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../.." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../puerto_tcp_udp/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#que-son-los-puertos" class="nav-link">¿Qué son los puertos?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#video-explicativo" class="nav-link">Video explicativo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="que-son-los-puertos">¿Qué son los puertos?</h2>
+<p>Antes de saber qué tipos de puertos hay y para qué se utiliza cada uno, es aconsejable tener bien claro qué son los puertos.</p>
+<p>Para que se entienda de manera sencilla, un puerto se refiere a un punto de conexión final, como un router, que se utiliza para dirigir el tráfico de red entrante y saliente.</p>
+<blockquote>
+<p>Un <strong>puerto de conexión de red</strong> es un número lógico que sirve para <strong>identificar un servicio o aplicación concreta</strong> dentro de un dispositivo conectado a una red (como un ordenador, servidor o router).</p>
+</blockquote>
+<p>Cada puerto, está asociado virtualmente a un número y estos números, a su vez se dividen en diferentes categorías. La asignación de estos números es muy importante para garantizar una conexión ordenada y eficiente entre los diferentes dispositivos de la red.</p>
+<p>Funciona junto con la dirección IP:</p>
+<ul>
+<li><strong>IP</strong> → identifica el dispositivo</li>
+<li><strong>Puerto</strong> → identifica el servicio dentro del dispositivo</li>
+</ul>
+<h4 id="como-funciona">Cómo funciona</h4>
+<p>Cuando un equipo envía datos por la red:</p>
+<ol>
+<li>Se indica la dirección IP del destinatario.</li>
+<li>Se añade un número de puerto para especificar qué aplicación debe recibir esos datos.</li>
+</ol>
+<p>Si pensamos en un router, los puertos se utilizan para direccionar el tráfico de manera específica a aplicaciones concretas y servicios específicos. Por ejemplo, cuando envías una solicitud a un servidor web, el router recibe la solicitud en un puerto específico, <strong>como el 80 para HTTP o el 443 para HTTPS</strong>. Luego, el router redirige la solicitud al dispositivo correcto en la red interna donde estás conectado.</p>
+<p><img alt="Puertos_HTTP" src="../../img/Puertos_http.png" /></p>
+<p>Además, cada puerto, tiene su propia función y dará mejores resultados para según qué servicio. Para el correo electrónico, por ejemplo, se utiliza el puerto 25. Por otro lado, los puertos privados permiten la comunicación interna dentro de la propia red sin que haya interferencias externas que puedan interrumpir la comunicación.</p>
+<p>Al igual que también hay muchos puertos virtuales. Se pueden encontrar con números de puerto que van del 0 al 65535. Y es que los protocolos de Internet TCP y UDP deciden a qué proceso se envía el paquete de datos. Hay que tener en cuenta que esto se basa en un esquema servidor cliente.</p>
+<h2 id="video-explicativo">Video explicativo</h2>
+<p>Veamos una explicación más detallada en video:</p>
+<iframe style="width:80%; aspect-ratio:16/9;border:0;" src="https://www.youtube.com/embed/hmGmeGDRUAU" title="Tipos de puertos: bien conocidos, asignados y efímeros. Curso de redes desde 0 | Cap 6 |" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
