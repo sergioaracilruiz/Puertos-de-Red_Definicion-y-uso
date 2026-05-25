@@ -1,7 +1,7 @@
 site_name: PUERTOS DE RED - definición y uso
 
-docs_dir: "docs"
-site_dir: "site"
+docs_dir: "md"
+site_dir: "docs"
 
 theme: mkdocs
 
